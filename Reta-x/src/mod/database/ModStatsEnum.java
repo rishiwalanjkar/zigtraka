@@ -1,0 +1,17 @@
+package mod.database;
+
+public enum ModStatsEnum {
+	mod_day_tapcount ,mod_day_ttotd_T1,mod_day_ttotd_T10,mod_day_ttotd_T11
+	,mod_day_ttotd_T12,mod_day_ttotd_T2,mod_day_ttotd_T3,mod_day_ttotd_T4,mod_day_ttotd_T5
+	,mod_day_ttotd_T6,mod_day_ttotd_T7,mod_day_ttotd_T8,mod_day_ttotd_T9
+	,mod_id,mod_month_tapcount,mod_month_ttotd_T1,mod_month_ttotd_T10,mod_month_ttotd_T11
+	,mod_month_ttotd_T12,mod_month_ttotd_T2,mod_month_ttotd_T3,mod_month_ttotd_T4
+	,mod_month_ttotd_T5,mod_month_ttotd_T6,mod_month_ttotd_T7,mod_month_ttotd_T8
+	,mod_month_ttotd_T9,mod_pday_tapcount,mod_pmonth_tapcount,mod_pweek_tapcount
+	,mod_tilldate_tapcount,mod_tilldate_ttotd_T1,mod_tilldate_ttotd_T10,mod_tilldate_ttotd_T11
+	,mod_tilldate_ttotd_T12,mod_tilldate_ttotd_T2,mod_tilldate_ttotd_T3,mod_tilldate_ttotd_T4
+	,mod_tilldate_ttotd_T5,mod_tilldate_ttotd_T6,mod_tilldate_ttotd_T7,mod_tilldate_ttotd_T8
+	,mod_tilldate_ttotd_T9,mod_week_tapcount,mod_week_ttotd_T1,mod_week_ttotd_T10
+	,mod_week_ttotd_T11,mod_week_ttotd_T12,mod_week_ttotd_T2,mod_week_ttotd_T3,mod_week_ttotd_T4
+	,mod_week_ttotd_T5,mod_week_ttotd_T6,mod_week_ttotd_T7,mod_week_ttotd_T8,mod_week_ttotd_T9;
+}

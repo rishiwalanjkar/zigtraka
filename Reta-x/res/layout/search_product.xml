@@ -1,0 +1,310 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SearchProduct" >
+
+    <SearchView
+        android:id="@+id/search_product_searchview"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/container_dropshadow" >
+    </SearchView>
+
+    <TextView android:id="@+id/search_product_productinfotextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Product Information:"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/TextSize"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:id="@+id/search_product_scrollviewgridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/gridbackground"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="50dp"
+        android:visibility="invisible" >
+
+        <GridLayout
+            android:id="@+id/search_product_gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:columnCount="2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="invisible" >
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Product Code"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_product_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Price Rs."
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Product Model"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_product_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Mkg.Charges"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_making_Charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Gemstone"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_gemestone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Cut"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:gravity="right"
+                android:text="Carat"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_carat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:gravity="left"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="Type"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+
+            <TextView />
+
+            <Space />
+
+            <TextView
+                android:layout_gravity="left"
+                android:text="Wear"
+                android:textColor="@color/TextColor"
+                android:textSize="@dimen/TextSize" />
+
+            <EditText
+                android:id="@+id/search_product_wear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:enabled="false"
+                android:textColor="@color/EditText"
+                android:textSize="@dimen/TextSize" />
+        </GridLayout>
+    </ScrollView>
+
+            <ListView
+                android:id="@+id/search_product_listView"
+                android:layout_width="563dp"
+                android:layout_height="120dp" 
+        android:layout_below="@+id/searchView1"
+        android:layout_marginTop="111dp"
+        android:fadeScrollbars="false" 
+        android:background="@drawable/listbackground"
+        android:visibility="invisible"
+        >
+            </ListView>
+<TextView 
+    android:id="@+id/search_product_no_of_itemstextview"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="71dp"
+    android:textColor="@color/Yellow"
+    android:visibility="invisible"/>
+    <ScrollView
+        android:id="@+id/search_product_descriptionscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/buttonslayout"
+        android:layout_marginBottom="30dp"
+        android:fadeScrollbars="false" 
+        android:background="@drawable/gridbackground"
+        android:visibility="invisible">
+      <LinearLayout android:layout_width="match_parent"
+            android:layout_height="100dp"
+            >
+        <EditText
+            android:id="@+id/search_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/White"
+            android:textSize="@dimen/TextSize"
+            android:background="@drawable/descriptionbackground"
+            android:visibility="invisible" 
+            android:enabled="false">
+        </EditText></LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonslayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <Button
+            android:id="@+id/search_product_deletebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="63dp"
+            android:background="@drawable/buttons"
+            android:text="DELETE"
+            android:textSize="@dimen/TextSize" />
+
+        <Button
+            android:id="@+id/search_product_addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="78dp"
+            android:background="@drawable/buttons"
+            android:text="ADD"
+            android:textSize="@dimen/TextSize" />
+
+        <Button
+            android:id="@+id/search_product_editbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="69dp"
+            android:background="@drawable/buttons"
+            android:text="EDIT"
+            android:textSize="@dimen/TextSize" />
+    </LinearLayout>
+
+</RelativeLayout>

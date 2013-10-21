@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".KpiForCustomers" >
+
+    <Spinner
+        android:id="@+id/charts_and_graph_spinner"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/charts_and_graph_spinner"
+        android:layout_marginRight="19dp"
+        android:layout_toLeftOf="@+id/charts_and_graph_spinner"
+        android:text="@string/for_past"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/charts_and_graph_spinner"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="1dp"
+        android:text="@string/new_customers_in_this_period"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/kpi_for_customers_new_customerstextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/charts_and_graph_spinner"
+        android:text="@string/na"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="74dp"
+        android:paddingLeft="1dp"
+        android:text="@string/Average_time_spent_by_a_customer"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/kpi_for_customers_Average_time_spentextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/kpi_for_customers_new_customerstextView"
+        android:text="@string/Average_time_spent_by_a_customer_tot"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/kpi_for_customers_increase_in_new_customerstextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/kpi_for_customers_Average_time_spentextView"
+        android:text="@string/increase_in_new_customers_over_period_tot"
+        android:textSize="23sp" />
+
+    <ListView
+        android:id="@+id/kpi_for_customers_top_most_customerslistView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/message" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/kpi_for_customers_top_most_customerslistView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="@string/Top_3_most_frequent_customers_during_this_period"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="82dp"
+        android:paddingLeft="1dp"
+        android:text="@string/increase_in_new_customers_over_period"
+        android:textSize="23sp" />
+
+</RelativeLayout>

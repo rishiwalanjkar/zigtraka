@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="Heading_Size">48sp</dimen>
+    <dimen name="TextSize">22sp</dimen>
+    <dimen name="ListTextSize">48sp</dimen>
+    <dimen name="nfc_interaction_icon1_width">40dp</dimen>
+    <dimen name="nfc_interaction_icon2_width">30dp</dimen>
+    <dimen name="Welcome_Titles">24sp</dimen>
+    <dimen name="Description">18sp</dimen>
+    <dimen name="gridh">200dp</dimen>
+</resources>

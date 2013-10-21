@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zigtraka.nfc.reta_x"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/nfclogo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Transparent"
+        android:windowSoftInputMode="adjustPan" >
+        
+        <activity
+            android:name="zigtraka.nfc.reta_x.GetProductInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            >
+            
+        </activity>
+        
+        <activity
+            android:name="zigtraka.nfc.reta_x.ProductInformation"
+            android:label="@string/title_activity_second"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Login"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Admin"
+            android:label="@string/title_activity_admin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.NFCInteraction"
+            android:label="@string/title_NFCInteraction"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.AlertsAndReminders"
+            android:label="Alerts and Reminders"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Settings"
+            android:label="Settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Help"
+            android:label="Help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.StockTake"
+            android:label="@string/title_activity_stock_take"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.SearchProduct"
+            android:label="Search Product"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.NFCSettings"
+            android:label="NFC Settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.About"
+            android:label="About"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Dashboard"
+            android:label="Dashboard"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.KpiForAssets"
+            android:label="KPI for Assets"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.KpiForCustomers"
+            android:label="KPI for Customers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Chartsandgraphs"
+            android:label="Charts and Graphs"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Support_Contact"
+            android:label="Support Contact"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.AppUpdates"
+            android:label="App Update"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Subscription"
+            android:label="Subscription"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.UserProfile"
+            android:label="User Profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.Misc"
+            android:label="Misc"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="zigtraka.nfc.reta_x.TestDb"
+            android:label="Test DB"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

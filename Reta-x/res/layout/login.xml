@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login" >
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:orientation="vertical" 
+        android:background="@color/TransparentWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:gravity="right"
+            android:paddingLeft="70dp"
+            android:text="Login"
+            android:textColor="@color/TextColor"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/logintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:layout_row="1"
+            android:gravity="right"
+            android:text="UserName:"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:id="@+id/passwordtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="right|center_vertical"
+            android:layout_row="2"
+            android:text="@string/password"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/loginedit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="50dp"
+            android:layout_row="1"
+            android:background="@drawable/container_dropshadow"
+            android:gravity="left"
+            android:textColor="#F0000000"
+            android:textSize="@dimen/TextSize" />
+        <EditText
+            android:id="@+id/passwordedit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            android:layout_row="2"
+            android:background="@drawable/container_dropshadow"
+            android:inputType="textPassword"
+            android:textColor="#F0000000"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:checked="true"
+            android:text="@string/rememberme"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <Button
+            android:id="@+id/signinbutton"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:background="@drawable/buttons"
+            android:text="@string/SignIn"
+            android:textSize="@dimen/TextSize" />
+
+        <Button
+            android:id="@+id/cancelbutton"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="4"
+            android:background="@drawable/buttons"
+            android:text="@string/Cancel"
+            android:textSize="@dimen/TextSize" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/welcometoretatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/RetaX"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/Heading_Size" />
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reta-x</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="settings">Settings</string>
+    <string name="userprofile">User Profile</string>
+    <string name="NFCsettings">NFC Settings</string>
+    <string name="RetaX">Welcome To RetaX App</string>
+    <string name="password">Password</string>
+    <string name="rememberme">Remember Me</string>
+    <string name="Cancel">Cancel</string>
+    <string name="title_NFCInteraction">NFC Interaction</string>
+    <string name="SignIn">Sign In</string>
+    <string name="title_activity_admin">Admin</string>
+    <string name="title_activity_stock_take">StockTake</string>
+    <string name="title_activity_search_product">SearchProduct</string>
+    <string name="for_past">For past</string>
+    <string name="assets_not_scanned_in_this_period">Assets not scanned in this period</string>
+    <string name="na">NA</string>
+    <string name="new_customers_in_this_period">New Customers in this period</string>
+    <string name="total_taps_in_this_period">total taps in this period</string>
+    <string name="total_taps_in_this_period_tot">tot</string>
+    <string name="increase_in_taps">tot</string>
+    <string name="increase_in_taps_over_previous">% increase in taps over previous period</string>
+    <string name="Top_3_least_tapped_items">Top 3 least tapped items:</string>
+    <string name="Top_3_most_frequently_tapped_items">Top 3 most frequently tapped items:</string>
+    <string name="Average_time_spent_by_a_customer">Average time spent by a customer</string>
+    <string name="Average_time_spent_by_a_customer_tot">tot</string>
+    <string name="increase_in_new_customers_over_period">% increase in new customers over period</string>
+    <string name="increase_in_new_customers_over_period_tot">tot</string>
+    <string name="Top_3_most_frequent_customers_during_this_period">Top 3 most frequent customers during this period</string>
+    <string name="Pie_Chart">Pie Chart</string>
+    <string name="Bar_Chart">Bar Chart</string>
+
+</resources>
