@@ -5,7 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.TreeMap;
 
+import mod.database.CustMainEnum;
 import mod.database.ModStatsInterface;
 
 import android.content.ContentValues;
@@ -381,4 +383,39 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 		return cursor.getInt(0);
 	}
 
+	/**
+	 * Function to add new customer Entry in Database
+	 */
+	public Cursor addCustomerDetails(String Name,String Area,String Address,String Email,String MobileNo)
+	{
+		applicationDatabase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME,
+				null, SQLiteDatabase.OPEN_READWRITE);
+		Cursor cursor = applicationDatabase
+				.rawQuery("Select * from "+CustMainEnum.CustMain.TableName,null);
+		cursor.moveToFirst();
+		return cursor;	
+	}
+	
+	/**
+	 * Function to get areawise customer count
+	 */
+	public TreeMap<String, Integer> getAreaWiseCustomerStats()
+	{
+		TreeMap<String, Integer> areaAnalysis=new TreeMap<String, Integer>();
+
+		applicationDatabase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME,
+				null, SQLiteDatabase.OPEN_READWRITE);
+		Cursor cursor = applicationDatabase
+				.rawQuery("SELECT "+CustMainEnum.CustMain.Area+", COUNT(*) AS `num`FROM "+CustMainEnum.CustMain.TableName+" GROUP BY "+CustMainEnum.CustMain.Area,null);
+		
+		if(cursor.moveToFirst())
+		{
+			do{
+			areaAnalysis.put(cursor.getString(0),cursor.getInt(1));
+			}while(cursor.moveToNext());
+		}
+		
+		return areaAnalysis;	
+	}
+	
 }
