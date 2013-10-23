@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class ProductInformation extends Activity implements TextToSpeech.OnInitListener
+public class ProductInformation extends BaseActivity implements TextToSpeech.OnInitListener
 {
 		String TagID, TagContents;
 	String[] TagDetails;
@@ -28,7 +28,7 @@ public class ProductInformation extends Activity implements TextToSpeech.OnInitL
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.product_information);
+		
 
 	    textToSpeech_Obj=new TextToSpeech(getApplicationContext(), this);
 		bundle = getIntent().getExtras();
@@ -131,6 +131,12 @@ public class ProductInformation extends Activity implements TextToSpeech.OnInitL
 		textToSpeech_Obj.stop();
 		textToSpeech_Obj.shutdown();
 		finish();
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.product_information;
 	}
 	
 	

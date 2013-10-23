@@ -18,7 +18,7 @@ import android.widget.GridView;
  * 
  */
 
-public class Admin extends Activity {
+public class Admin extends BaseActivity {
 	GridView gridView;
 	ArrayList<CustomGridViewItem> gridArray = new ArrayList<CustomGridViewItem>();
 	CustomGridViewAdapter customGridAdapter;
@@ -27,7 +27,7 @@ public class Admin extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.admin);
+		
 		AdminOprions = getResources().getStringArray(R.array.AdminOptions);
 		// set grid view item
 		Bitmap homeIcon = BitmapFactory.decodeResource(this.getResources(),
@@ -88,6 +88,12 @@ public class Admin extends Activity {
 							CustomerData.class));
 			}
 		});
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.admin;
 	}
 
 }

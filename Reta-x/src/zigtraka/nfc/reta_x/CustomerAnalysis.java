@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.widget.AutoCompleteTextView.Validator;
 import android.widget.LinearLayout;
 
-public class CustomerAnalysis extends Activity {
+public class CustomerAnalysis extends BaseActivity {
 
 	private LinearLayout Graph;
 	private GraphicalView g;
@@ -25,7 +25,7 @@ public class CustomerAnalysis extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.customer_analysis);
+		
 		Graph = (LinearLayout) findViewById(R.id.customer_analysis);
 		
 		AreaAnalysis = new MyDatabaseHelper(getApplicationContext())
@@ -45,6 +45,12 @@ public class CustomerAnalysis extends Activity {
 				PieChartSpecification.getPieRenderer("Area Wise Analysis",values.length));
 		Graph.addView(g);
 
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.customer_analysis;
 	}
 
 	

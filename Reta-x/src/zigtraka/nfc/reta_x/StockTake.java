@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class StockTake extends Activity {
+public class StockTake extends BaseActivity {
 	String TagID;
 	String[][] techListsArray;
 	PendingIntent pendingIntent;
@@ -34,7 +34,7 @@ public class StockTake extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.stock_take);
+
 
 		// creating pending intent
 		pendingIntent = PendingIntent.getActivity(this, 0, new Intent(
@@ -151,6 +151,12 @@ public class StockTake extends Activity {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 		finish();
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.stock_take;
 	}
 	
 
