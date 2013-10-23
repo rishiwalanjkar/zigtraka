@@ -386,14 +386,21 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 	/**
 	 * Function to add new customer Entry in Database
 	 */
-	public Cursor addCustomerDetails(String Name,String Area,String Address,String Email,String MobileNo)
+	public void addCustomerDetails(String Name,String Area,String Address,String Email,String MobileNo)
 	{
 		applicationDatabase = SQLiteDatabase.openDatabase(DB_PATH + DB_NAME,
 				null, SQLiteDatabase.OPEN_READWRITE);
-		Cursor cursor = applicationDatabase
-				.rawQuery("Select * from "+CustMainEnum.CustMain.TableName,null);
-		cursor.moveToFirst();
-		return cursor;	
+		
+		ContentValues values = new ContentValues();
+		values.put(CustMainEnum.CustMain.Name, Name);
+		values.put(CustMainEnum.CustMain.Area, Area);
+		values.put(CustMainEnum.CustMain.Address, Address);
+		values.put(CustMainEnum.CustMain.Email, Email);
+		values.put(CustMainEnum.CustMain.Mobile, MobileNo);
+
+		applicationDatabase.insert(CustMainEnum.CustMain.TableName, null, values);
+		applicationDatabase.close();
+		Toast.makeText(applicationContext, "Record Added Successfully!", Toast.LENGTH_SHORT).show();
 	}
 	
 	/**

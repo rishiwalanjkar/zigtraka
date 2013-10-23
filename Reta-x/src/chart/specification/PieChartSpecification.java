@@ -22,14 +22,14 @@ public class PieChartSpecification {
 		return series;
 	}
 
-	public static DefaultRenderer getPieRenderer(String ChartTitle) {
+	public static DefaultRenderer getPieRenderer(String ChartTitle,int length) {
 		DefaultRenderer renderer = new DefaultRenderer();
-		renderer.setChartTitleTextSize(20);
-		renderer.setLabelsTextSize(15);
-		renderer.setLegendTextSize(15);
+		renderer.setChartTitleTextSize(35);
+		renderer.setLabelsTextSize(25);
+		renderer.setLegendTextSize(25);
 		renderer.setMargins(new int[] { 40, 40, 40, 40 });
         renderer.setTextTypeface(Typeface.DEFAULT_BOLD);
-		for (int i = 0; i < 12; i++) {
+		for (int i = 0; i < length; i++) {
 			SimpleSeriesRenderer r = new SimpleSeriesRenderer();
 			r.setColor(color[i]);
 			renderer.addSeriesRenderer(r);

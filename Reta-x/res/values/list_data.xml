@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <string-array name="AdminOptions">
-     <item >DashBoard</item>
-     <item >NFC Interaction</item>
-     <item >Alerts and Reminders</item>
-     <item >Search Product</item>
-     <item >Settings</item>
-     <item >Help</item>
- </string-array>   
- <string-array name="SettingOptions">
-     <item >User Profile</item>
-     <item >NFC Settings</item>
-     <item >Test DB</item>
-     <item >Miscellaneous</item>
- </string-array>   
- <string-array name="HelpOptions">
-     <item >About</item>
-     <item >Support-Contact</item>
-     <item >App Updates</item>
-     <item >Subscription</item>
- </string-array>   
- <string-array name="AlertRemindersOptions">
-     <item >Alerts</item>
-     <item >Items Sold</item>
-     <item >Items Updated</item>
-     <item >Items Missing</item>
-     <item >Reminders</item>
-     <item >Daily</item>
-     <item >Weekly</item>
-     <item >Stock Take</item>
-     </string-array>   
- <string-array name="NFCInteractionOptions">
-     <item >Get Product Info</item>
-     <item >Stock Take</item>
- </string-array>   
- <string-array name="NFCSettingsOptions">
-     <item >Single Tap Single Read</item>
-     <item >Single Tap Single Read</item>
-     <item >Single Tap Single Read</item>    
- </string-array>   
+
+    <string-array name="AdminOptions">
+        <item>DashBoard</item>
+        <item>NFC Interaction</item>
+        <item>Alerts and Reminders</item>
+        <item>Search Product</item>
+        <item>Settings</item>
+        <item>Help</item>
+        <item>Customer Data</item>
+    </string-array>
+    <string-array name="SettingOptions">
+        <item>User Profile</item>
+        <item>NFC Settings</item>
+        <item>Test DB</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="HelpOptions">
+        <item>About</item>
+        <item>Support-Contact</item>
+        <item>App Updates</item>
+        <item>Subscription</item>
+    </string-array>
+    <string-array name="AlertRemindersOptions">
+        <item>Alerts</item>
+        <item>Items Sold</item>
+        <item>Items Updated</item>
+        <item>Items Missing</item>
+        <item>Reminders</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Stock Take</item>
+    </string-array>
+    <string-array name="NFCInteractionOptions">
+        <item>Get Product Info</item>
+        <item>Stock Take</item>
+    </string-array>
+    <string-array name="NFCSettingsOptions">
+        <item>Single Tap Single Read</item>
+        <item>Single Tap Single Read</item>
+        <item>Single Tap Single Read</item>
+    </string-array>
+
 </resources>
