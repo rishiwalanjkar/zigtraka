@@ -156,6 +156,9 @@
             android:label="Test DB"
             android:screenOrientation="portrait" >
         </activity>
+        <activity android:name="CustomerData" android:screenOrientation="portrait" android:label="CustomerData"></activity>
+        <activity android:label="CustomerSurveyForm" android:name="CustomerSurveyForm" android:screenOrientation="portrait"></activity>
+        <activity android:label="CustomerAnalysis" android:name="CustomerAnalysis" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

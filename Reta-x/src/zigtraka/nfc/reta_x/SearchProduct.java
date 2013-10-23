@@ -113,8 +113,7 @@ public class SearchProduct extends Activity {
 									.getWindowToken(),
 									InputMethodManager.HIDE_NOT_ALWAYS);
 
-				listview.setFocusable(true);
-				listview.requestFocus();
+				listview.requestFocusFromTouch();
 				}
 				return false;
 			}

@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CustomerSurveyForm" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/customer_survey_form_customer_details"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/welcomeusertextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Welcome user Zigtraka"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/search_product_gridLayout"
+        android:layout_marginBottom="171dp"
+        android:layout_marginRight="27dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/customer_survey_reset"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/negative_buttons"
+            android:text="@string/customer_survey_form_customer_reset"
+            android:textSize="@dimen/TextSize" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/search_product_gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_alignRight="@+id/welcomeusertextView2"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:columnCount="3" >
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="@string/customer_survey_form_customer_name"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/customer_survey_form_customer_nameedit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:textColor="@color/EditText"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="*"
+            android:textColor="@color/Red"
+            android:textSize="20sp" />
+
+        <TextView />
+
+        <Space android:layout_columnSpan="2" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="@string/customer_survey_form_customer_area"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/customer_survey_form_customer_areaedit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:textColor="@color/EditText"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="*"
+            android:textColor="@color/Red"
+            android:textSize="20sp" />
+
+        <TextView />
+
+        <Space android:layout_columnSpan="2" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="@string/customer_survey_form_customer_address"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/customer_survey_form_customer_addressedit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:textColor="@color/EditText"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+          />
+
+        <TextView />
+
+        <Space android:layout_columnSpan="2" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="@string/customer_survey_form_customer_email"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/customer_survey_form_customer_emailedit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:textColor="@color/EditText"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+            />
+
+        <TextView />
+
+        <Space android:layout_columnSpan="2" />
+
+        <TextView
+            android:layout_gravity="left"
+            android:gravity="right"
+            android:text="@string/customer_survey_form_customer_mobile"
+            android:textColor="@color/TextColor"
+            android:textSize="@dimen/TextSize" />
+
+        <EditText
+            android:id="@+id/customer_survey_form_customer_mobileedit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="left"
+            android:textColor="@color/EditText"
+            android:textSize="@dimen/TextSize" />
+
+        <TextView
+             />
+
+        <TextView />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/customer_survey_save"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/search_product_gridLayout"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:background="@drawable/positive_buttons"
+        android:text="@string/customer_survey_form_customer_save"
+        android:textSize="@dimen/TextSize" />
+
+</RelativeLayout>

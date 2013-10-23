@@ -22,12 +22,13 @@ public class Admin extends Activity {
 	GridView gridView;
 	ArrayList<CustomGridViewItem> gridArray = new ArrayList<CustomGridViewItem>();
 	CustomGridViewAdapter customGridAdapter;
-    String[] AdminOprions;
+	String[] AdminOprions;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.admin);
-        AdminOprions=getResources().getStringArray(R.array.AdminOptions);
+		AdminOprions = getResources().getStringArray(R.array.AdminOptions);
 		// set grid view item
 		Bitmap homeIcon = BitmapFactory.decodeResource(this.getResources(),
 				R.drawable.dashboard);
@@ -41,6 +42,8 @@ public class Admin extends Activity {
 				R.drawable.settings);
 		Bitmap helpIcon = BitmapFactory.decodeResource(this.getResources(),
 				R.drawable.help);
+		Bitmap customerSurveyIcon = BitmapFactory.decodeResource(
+				this.getResources(), R.drawable.customer_survey);
 
 		gridArray.add(new CustomGridViewItem(homeIcon, AdminOprions[0]));
 		gridArray.add(new CustomGridViewItem(nfcIcon, AdminOprions[1]));
@@ -48,12 +51,14 @@ public class Admin extends Activity {
 		gridArray.add(new CustomGridViewItem(searchIcon, AdminOprions[3]));
 		gridArray.add(new CustomGridViewItem(settingsIcon, AdminOprions[4]));
 		gridArray.add(new CustomGridViewItem(helpIcon, AdminOprions[5]));
+		gridArray.add(new CustomGridViewItem(customerSurveyIcon,
+				AdminOprions[6]));
 
 		gridView = (GridView) findViewById(R.id.gridView1);
-		customGridAdapter = new CustomGridViewAdapter(this, R.layout.custom_row_grid,
-				gridArray);
+		customGridAdapter = new CustomGridViewAdapter(this,
+				R.layout.custom_row_grid, gridArray);
 		gridView.setAdapter(customGridAdapter);
-		
+
 		gridView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -61,17 +66,26 @@ public class Admin extends Activity {
 					long id) {
 				// TODO Auto-generated method stub
 				if (position == 0)
-					startActivity(new Intent(getApplicationContext(), Dashboard.class));
+					startActivity(new Intent(getApplicationContext(),
+							Dashboard.class));
 				if (position == 1)
-					startActivity(new Intent(getApplicationContext(), NFCInteraction.class));
+					startActivity(new Intent(getApplicationContext(),
+							NFCInteraction.class));
 				if (position == 2)
-					startActivity(new Intent(getApplicationContext(), AlertsAndReminders.class));
+					startActivity(new Intent(getApplicationContext(),
+							AlertsAndReminders.class));
 				if (position == 3)
-					startActivity(new Intent(getApplicationContext(), SearchProduct.class));
+					startActivity(new Intent(getApplicationContext(),
+							SearchProduct.class));
 				if (position == 4)
-					startActivity(new Intent(getApplicationContext(), Settings.class));
+					startActivity(new Intent(getApplicationContext(),
+							Settings.class));
 				if (position == 5)
-					startActivity(new Intent(getApplicationContext(), Help.class));
+					startActivity(new Intent(getApplicationContext(),
+							Help.class));
+				if (position == 6)
+					startActivity(new Intent(getApplicationContext(),
+							CustomerData.class));
 			}
 		});
 	}
