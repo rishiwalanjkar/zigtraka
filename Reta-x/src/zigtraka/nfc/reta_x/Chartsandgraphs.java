@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-public class Chartsandgraphs extends Activity {
+public class Chartsandgraphs extends BaseActivity {
 	private GraphicalView g;
 	private int[] values;
 	private int yAxisEndLimit;
@@ -32,7 +32,7 @@ public class Chartsandgraphs extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.chartsandgraphs);
+		
 		
 		// Specifications for 1st Graph
 		values = new MyDatabaseHelper(getApplicationContext()).getHourStats(0);
@@ -158,5 +158,11 @@ public class Chartsandgraphs extends Activity {
 			if (values[i] > max)
 				max = values[i];
 		return max;
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.chartsandgraphs;
 	}
 }

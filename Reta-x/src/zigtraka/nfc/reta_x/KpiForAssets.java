@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class KpiForAssets extends Activity {
+public class KpiForAssets extends BaseActivity {
 
 	private TextView AssetNotScanned,totaltaps,PercentIncreaseInTaps;
 	private ListView TopLeastTapped,TopMostTapped;
@@ -14,7 +14,7 @@ private MyDatabaseHelper mydatabasehelper;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.kpi_for_assets);
+		
 		
 		mydatabasehelper=new MyDatabaseHelper(getApplicationContext());
 		
@@ -40,6 +40,11 @@ private MyDatabaseHelper mydatabasehelper;
 				android.R.layout.simple_list_item_1,
 				details));
 
+	}
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.kpi_for_assets;
 	}
 
 }

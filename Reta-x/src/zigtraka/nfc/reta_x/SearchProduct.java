@@ -19,7 +19,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.SearchView.OnQueryTextListener;
 
-public class SearchProduct extends Activity {
+public class SearchProduct extends BaseActivity {
 	private SearchView searchview;
 	private ListView listview;
 	private Cursor cursor;
@@ -36,7 +36,7 @@ public class SearchProduct extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.search_product);
+		
 		mydbhelper = new MyDatabaseHelper(getApplicationContext());
 
 		gridlayout = (GridLayout) findViewById(R.id.search_product_gridLayout);
@@ -215,5 +215,11 @@ public class SearchProduct extends Activity {
 			}
 		});
 
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.search_product;
 	}
 }

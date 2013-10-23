@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class CustomerSurveyForm extends Activity {
+public class CustomerSurveyForm extends BaseActivity {
 
 	private EditText NameEdit, AreaEdit, AddressEdit, EmailEdit, MobileEdit;
 	private MyDatabaseHelper mydatabasehelper;
@@ -21,7 +21,7 @@ public class CustomerSurveyForm extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.customer_survey_form);
+		
 		Welcome = (TextView) findViewById(R.id.welcomeusertextView2);
 		String fontpath = "fonts/Roboto-Bold.ttf";
 		Typeface tf = Typeface.createFromAsset(getAssets(),fontpath);
@@ -43,6 +43,12 @@ public class CustomerSurveyForm extends Activity {
 				new MyDatabaseHelper(getApplicationContext()).addCustomerDetails(NameEdit.getText().toString(), AreaEdit.getText().toString(), AddressEdit.getText().toString(), EmailEdit.getText().toString(), MobileEdit.getText().toString());
 			}
 		});
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.customer_survey_form;
 	}
 
 	

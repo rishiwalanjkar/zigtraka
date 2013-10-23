@@ -19,7 +19,7 @@ import android.speech.tts.TextToSpeech;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GetProductInfo extends Activity{
+public class GetProductInfo extends BaseActivity{
 	String TagID;
 	String[][] techListsArray;
 	PendingIntent pendingIntent;
@@ -30,7 +30,7 @@ public class GetProductInfo extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.get_product_info);
+		
 
 		// creating pending intent
 		pendingIntent = PendingIntent.getActivity(this, 0, new Intent(
@@ -249,6 +249,12 @@ public class GetProductInfo extends Activity{
 			}
 		}
 
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.get_product_info;
 	}
 
 	

@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class Misc extends Activity {
+public class Misc extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.misc);
+		
 		
 		Button back=(Button)findViewById(R.id.button1);
 		back.setOnClickListener(new OnClickListener() {
@@ -22,6 +22,12 @@ public class Misc extends Activity {
 			finish();	
 			}
 		});
+	}
+
+	@Override
+	protected int getResourceLayoutId() {
+		// TODO Auto-generated method stub
+		return R.layout.misc;
 	}
 
 
