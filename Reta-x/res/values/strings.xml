@@ -34,5 +34,16 @@
     <string name="Top_3_most_frequent_customers_during_this_period">Top 3 most frequent customers during this period</string>
     <string name="Pie_Chart">Pie Chart</string>
     <string name="Bar_Chart">Bar Chart</string>
+    <string name="title_activity_customer_survey_form">CustomerSurveyForm</string>
+    <string name="title_activity_customer_analysis">CustomerAnalysis</string>
+    <string name="customer_survey_form_customer_details">Customer Details:</string>
+    <string name="customer_survey_form_customer_name">Name:</string>
+    <string name="customer_survey_form_customer_area">Area:</string>
+    <string name="customer_survey_form_customer_address">Address:</string>
+    <string name="customer_survey_form_customer_email">Email:</string>
+    <string name="customer_survey_form_customer_mobile">Mobile:</string>
+    <string name="customer_survey_form_customer_save">Save</string>
+    <string name="customer_survey_form_customer_reset">Reset</string>
+    <string name="title_activity_customer_data">CustomerData</string>
 
 </resources>

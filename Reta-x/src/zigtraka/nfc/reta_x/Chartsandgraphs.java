@@ -92,7 +92,7 @@ public class Chartsandgraphs extends Activity {
 					g = ChartFactory.getPieChartView(getApplicationContext(),
 							PieChartSpecification.getPieSeries(values,
 									NAME_LIST), PieChartSpecification
-									.getPieRenderer(ChartTitle));
+									.getPieRenderer(ChartTitle,values.length));
 					Graph1.addView(g);
 				}
 			}
@@ -139,7 +139,7 @@ public class Chartsandgraphs extends Activity {
 					g = ChartFactory.getPieChartView(getApplicationContext(),
 							PieChartSpecification.getPieSeries(values,
 									NAME_LIST), PieChartSpecification
-									.getPieRenderer(ChartTitle));
+									.getPieRenderer(ChartTitle,values.length));
 					Graph1.addView(g);
 				}
 			}
