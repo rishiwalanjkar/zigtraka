@@ -6,6 +6,7 @@ import org.achartengine.chart.BarChart.Type;
 
 import chart.specification.BarChartSpecification;
 import chart.specification.PieChartSpecification;
+import db.Access.DbForChartsAndGraphsActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -35,7 +36,7 @@ public class Chartsandgraphs extends BaseActivity {
 		
 		
 		// Specifications for 1st Graph
-		values = new MyDatabaseHelper(getApplicationContext()).getHourStats(0);
+		values = DbForChartsAndGraphsActivity.getHourStats(0);
 		BarDetails = "TapCount";
 		ChartTitle = "Frequency Tap Counts";
 		yAxisEndLimit = getMaxValueArray();
@@ -115,8 +116,7 @@ public class Chartsandgraphs extends BaseActivity {
 					View selectedItemView, int position, long id) {
 				// TODO Auto-generated method stub
 				if (BarChart.isChecked()) {
-					values = new MyDatabaseHelper(getApplicationContext())
-							.getHourStats(position);
+					values = DbForChartsAndGraphsActivity.getHourStats(position);
 					BarDetails = "TapCount";
 					yAxisEndLimit = getMaxValueArray();
 					xyAxisTitles = new String[] { "Hours", "Count" };
@@ -132,8 +132,7 @@ public class Chartsandgraphs extends BaseActivity {
 				}
 
 				if (PieChart.isChecked()) {
-					values = new MyDatabaseHelper(getApplicationContext())
-							.getHourStats(position);
+					values = DbForChartsAndGraphsActivity.getHourStats(position);
 					yAxisEndLimit = getMaxValueArray();
 					Graph1.removeAllViews();
 					g = ChartFactory.getPieChartView(getApplicationContext(),

@@ -7,6 +7,7 @@ import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
 
 import chart.specification.PieChartSpecification;
+import db.Access.dbForCustomerAnalysisActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -28,8 +29,7 @@ public class CustomerAnalysis extends BaseActivity {
 		
 		Graph = (LinearLayout) findViewById(R.id.customer_analysis);
 		
-		AreaAnalysis = new MyDatabaseHelper(getApplicationContext())
-				.getAreaWiseCustomerStats();
+		AreaAnalysis = dbForCustomerAnalysisActivity.getAreaWiseCustomerStats();
 
 		values = new int[AreaAnalysis.size()];
 		NAME_LIST = new String[AreaAnalysis.size()];

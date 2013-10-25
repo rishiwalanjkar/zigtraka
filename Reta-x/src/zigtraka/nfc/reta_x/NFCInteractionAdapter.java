@@ -25,17 +25,17 @@ public class NFCInteractionAdapter extends ArrayAdapter<String> {
 		// TODO Auto-generated method stub
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View rowView = inflater.inflate(R.layout.nfc_interaction, parent, false);
+		View rowView = inflater.inflate(R.layout.nfc_interaction_view, parent, false);
 		ImageView imageView = (ImageView) rowView.findViewById(R.id.nfc_interaction_icon1);
 		TextView textview = (TextView) rowView.findViewById(R.id.nfc_interaction_listlabel1);
 		textview.setText(Adminlist[position]);
 
 		// Change the icon for Windows and iPhone
 		String s = Adminlist[position];
-		if (s.equals("Get ProductInfo"))
-			imageView.setImageResource(R.drawable.settings);
+		if (s.equals("Get Product Info"))
+			imageView.setImageResource(R.drawable.productinfo);
 		else if (s.equals("Stock Take"))
-			imageView.setImageResource(R.drawable.settings);
+			imageView.setImageResource(R.drawable.stocktake);
 
 		return rowView;
 	}
