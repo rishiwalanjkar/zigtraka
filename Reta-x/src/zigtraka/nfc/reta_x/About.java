@@ -1,7 +1,7 @@
 package zigtraka.nfc.reta_x;
 
 import android.os.Bundle;
-import android.app.Activity;
+
 import android.widget.TextView;
 
 public class About extends BaseActivity {

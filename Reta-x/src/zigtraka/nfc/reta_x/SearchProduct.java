@@ -1,5 +1,7 @@
 package zigtraka.nfc.reta_x;
 
+import db.Access.DbForSearchProcuctActivity;
+import db.handler.DbConnector;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
@@ -18,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.SearchView.OnQueryTextListener;
+import android.widget.Toast;
 
 public class SearchProduct extends BaseActivity {
 	private SearchView searchview;
@@ -28,7 +31,7 @@ public class SearchProduct extends BaseActivity {
 	private GridLayout gridlayout;
 	private ScrollView scrollviewgridlayout, scrollviewdescription;
 	private Button btn_Edit, btn_Add, btn_Delete;
-	private MyDatabaseHelper mydbhelper;
+//	private MyDatabaseHelper mydbhelper;
 	private boolean EditFlag = false;
 	private int ListViewSelectedItemPosition = -1;
 	private TextView Txt_NoOfItemsFound, Txt_productInfoTitle;
@@ -37,7 +40,7 @@ public class SearchProduct extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		mydbhelper = new MyDatabaseHelper(getApplicationContext());
+//		mydbhelper = new MyDatabaseHelper(getApplicationContext());
 
 		gridlayout = (GridLayout) findViewById(R.id.search_product_gridLayout);
 		scrollviewgridlayout = (ScrollView) findViewById(R.id.search_product_scrollviewgridLayout);
@@ -62,6 +65,7 @@ public class SearchProduct extends BaseActivity {
 
 		listview = (ListView) findViewById(R.id.search_product_listView);
 		searchview = (SearchView) findViewById(R.id.search_product_searchview);
+		
 		searchview.setOnQueryTextListener(new OnQueryTextListener() {
 
 			@Override
@@ -78,8 +82,7 @@ public class SearchProduct extends BaseActivity {
 				Txt_productInfoTitle.setVisibility(View.INVISIBLE);
 
 				// getting result of searched keyword in cursor
-				cursor = new MyDatabaseHelper(getApplicationContext())
-						.searchViewResult(searchview.getQuery().toString());
+				cursor = DbForSearchProcuctActivity.searchViewResult(searchview.getQuery().toString());
 
 				if (cursor != null) {
 					// string which will hold list of data for listview
@@ -93,7 +96,8 @@ public class SearchProduct extends BaseActivity {
 							details[i] = cursor.getString(4);
 							cursor.moveToNext();
 						}
-
+                    DbConnector.close();
+                    
 					// defining adapter for listview
 					ArrayAdapter<String> adapter = new ArrayAdapter<String>(
 							getApplicationContext(),
@@ -170,7 +174,7 @@ public class SearchProduct extends BaseActivity {
 				if (EditFlag) {
 					if (cursor.moveToPosition(ListViewSelectedItemPosition)) {
 						TagID = cursor.getString(0);
-						mydbhelper.updateRowByTagID(TagID, ProductCode
+						DbForSearchProcuctActivity.updateRowByTagID(TagID, ProductCode
 								.getText().toString(), ProductModel.getText()
 								.toString(), Gemstone.getText().toString(),
 								Price.getText().toString(), Carat.getText()

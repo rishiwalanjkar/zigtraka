@@ -24,7 +24,7 @@ public class NFCSettingsAdapter extends ArrayAdapter<String> {
 		// TODO Auto-generated method stub
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View rowView = inflater.inflate(R.layout.nfcsettings, parent, false);
+		View rowView = inflater.inflate(R.layout.nfcsettings_view, parent, false);
 		TextView textview = (TextView) rowView.findViewById(R.id.nfcsettings_text);
 		textview.setText(Adminlist[position]);
 

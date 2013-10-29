@@ -1,5 +1,6 @@
 package zigtraka.nfc.reta_x;
 
+import db.Access.DbForCustomerSurveyFormActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Typeface;
@@ -13,7 +14,6 @@ import android.widget.TextView;
 public class CustomerSurveyForm extends BaseActivity {
 
 	private EditText NameEdit, AreaEdit, AddressEdit, EmailEdit, MobileEdit;
-	private MyDatabaseHelper mydatabasehelper;
 	private TextView Welcome;
 	private Button save;
 	private Button reset;
@@ -27,7 +27,6 @@ public class CustomerSurveyForm extends BaseActivity {
 		Typeface tf = Typeface.createFromAsset(getAssets(),fontpath);
 		Welcome.setTypeface(tf);
 		
-		mydatabasehelper = new MyDatabaseHelper(getApplicationContext());
 		NameEdit = (EditText) findViewById(R.id.customer_survey_form_customer_nameedit);
 		AreaEdit = (EditText) findViewById(R.id.customer_survey_form_customer_areaedit);
 		AddressEdit = (EditText) findViewById(R.id.customer_survey_form_customer_addressedit);
@@ -40,7 +39,7 @@ public class CustomerSurveyForm extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				new MyDatabaseHelper(getApplicationContext()).addCustomerDetails(NameEdit.getText().toString(), AreaEdit.getText().toString(), AddressEdit.getText().toString(), EmailEdit.getText().toString(), MobileEdit.getText().toString());
+				DbForCustomerSurveyFormActivity.addCustomerDetails(NameEdit.getText().toString(), AreaEdit.getText().toString(), AddressEdit.getText().toString(), EmailEdit.getText().toString(), MobileEdit.getText().toString());
 			}
 		});
 	}

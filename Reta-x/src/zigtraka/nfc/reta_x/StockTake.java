@@ -1,5 +1,7 @@
 package zigtraka.nfc.reta_x;
 
+import db.Access.DbForStockTakeActivity;
+import db.handler.DbConnector;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.MifareClassic;
@@ -59,7 +61,7 @@ public class StockTake extends BaseActivity {
 		IncreamentCount(getIntent());
 		
 		//total items entry in database
-		DatabaseItemCount=new MyDatabaseHelper(getApplicationContext()).getItemCount();
+		DatabaseItemCount=DbForStockTakeActivity.getItemCount();
 		
 		MatchInventory=(Button)findViewById(R.id.stock_take_matchinventory);
 		MatchInventory.setOnClickListener(new OnClickListener() {
@@ -91,13 +93,13 @@ public class StockTake extends BaseActivity {
 
 	private void InitializeTagTapDetails() {
 		// TODO Auto-generated method stub
-		Cursor cursor = new MyDatabaseHelper(getApplicationContext())
-				.getTagIDs();
+		Cursor cursor = DbForStockTakeActivity.getTagIDs();
 		if (cursor.moveToFirst())
 			for (int i = 0; i < cursor.getCount(); i++) {
 				StockCount.TagTapDetails.put(cursor.getString(0), 0);
 				cursor.moveToNext();
 			}
+		DbConnector.close();
 	}
 
 	private void IncreamentCount(Intent intent) {

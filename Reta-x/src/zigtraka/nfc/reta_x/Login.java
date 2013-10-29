@@ -1,5 +1,6 @@
 package zigtraka.nfc.reta_x;
 
+import deploy.appdata.Creater;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ public class Login extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 
+		Creater.deploy(getApplicationContext());
+		
 		Button Signin = (Button) findViewById(R.id.signinbutton);
 		Signin.setOnClickListener(new OnClickListener() {
 

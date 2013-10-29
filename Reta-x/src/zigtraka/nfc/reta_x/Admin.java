@@ -3,7 +3,7 @@ package zigtraka.nfc.reta_x;
 import java.util.ArrayList;
 
 import android.os.Bundle;
-import android.app.Activity;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,11 +12,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-/**
- * 
- * @author manish.s
- * 
- */
 
 public class Admin extends BaseActivity {
 	GridView gridView;
@@ -27,6 +22,8 @@ public class Admin extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		new MyDatabaseHelper(getApplicationContext());
 		
 		AdminOprions = getResources().getStringArray(R.array.AdminOptions);
 		// set grid view item

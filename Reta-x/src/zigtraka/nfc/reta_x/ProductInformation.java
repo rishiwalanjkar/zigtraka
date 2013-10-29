@@ -2,6 +2,8 @@ package zigtraka.nfc.reta_x;
 
 import java.util.Locale;
 
+import db.Access.DbForProductInformationActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.speech.tts.TextToSpeech;
@@ -17,7 +19,6 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 		String TagID, TagContents;
 	String[] TagDetails;
 	Bundle bundle;
-	MyDatabaseHelper mydatabase;
 	TextView ProductCode, ProductModel, Gemstone, Price, Carat, Cut, Type,
 			Wear, MakingCharges;
 	TextView Description, Welcome;
@@ -40,8 +41,7 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 		Welcome = (TextView) findViewById(R.id.product_information_welcome);
 		if (TagContents != null)
 			Welcome.setText("Welcome To " + TagContents + " Store");
-		mydatabase = new MyDatabaseHelper(getApplicationContext());
-		TagDetails = mydatabase.getTagDetails(TagID);
+		TagDetails = DbForProductInformationActivity.getTagDetails(TagID);
 
 		ProductCode = (TextView) findViewById(R.id.product_information_product_code);
 		ProductModel = (TextView) findViewById(R.id.product_information_product_model);

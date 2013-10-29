@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp" 
+    android:background="#20A0A0A0"
+    android:id="@+id/nfc_interaction_listcontainer">
+
+       <ImageView
+           android:id="@+id/nfc_interaction_icon2"
+           android:layout_width="@dimen/nfc_interaction_icon2_width"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentTop="true"
+           android:src="@drawable/nfcinteractionarrow" />
+
+
+       <ImageView
+           android:id="@+id/nfc_interaction_icon1"
+           android:layout_width="@dimen/nfc_interaction_icon1_width"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentTop="true"
+           android:src="@drawable/ic_launcher" />
+
+       <TextView
+           android:id="@+id/nfc_interaction_listlabel1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="2dp"
+           android:layout_toRightOf="@+id/nfc_interaction_icon1"
+           android:text="text"
+           android:textSize="@dimen/ListTextSize" />
+    
+</RelativeLayout>

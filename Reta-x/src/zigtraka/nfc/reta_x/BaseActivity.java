@@ -50,7 +50,7 @@ public abstract class BaseActivity extends Activity {
 			back = new Button(getApplicationContext());
 			back.setLayoutParams(bLParams);
 			back.setText("Back");
-			back.setBackgroundResource(R.drawable.negative_buttons);
+			back.setBackgroundResource(R.drawable.back_button);
 
 			// define home nevigation button
 			home = new Button(getApplicationContext());
