@@ -12,11 +12,5 @@ public class AppExpired extends Activity {
 		setContentView(R.layout.app_expired);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.app_expired, menu);
-		return true;
-	}
-
+	
 }

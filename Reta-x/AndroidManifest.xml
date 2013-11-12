@@ -170,7 +170,7 @@
         </activity>
         <activity
             android:name="zigtraka.nfc.reta_x.AppExpired"
-            android:label="@string/title_activity_app_expired" >
+            android:label="App Expired" >
         </activity>
     </application>
 
