@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Subscription" >
+    tools:context=".SubscriptionChecker" >
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
@@ -106,8 +106,7 @@
             android:layout_below="@+id/licensekeytextView"
             android:layout_marginTop="18dp"
             android:ems="10"
-            android:hint="Enter key"
-            android:inputType="textPassword" />
+            android:hint="Enter key" />
 
         <TextView
             android:id="@+id/licensekeytextView"
@@ -158,15 +157,28 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/Subscription_button"
+        android:id="@+id/Subscription_button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/relativeLayout2"
         android:layout_below="@+id/relativeLayout2"
-        android:layout_marginLeft="171dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="57dp"
         android:background="@drawable/positive_buttons"
-        android:text="RENEW"
+        android:text="Register"
+        android:textColor="@color/White"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/Subscription_button_activate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Subscription_button_register"
+        android:layout_alignBottom="@+id/Subscription_button_register"
+        android:layout_marginLeft="75dp"
+        android:layout_toRightOf="@+id/Subscription_button_register"
+        android:background="@drawable/positive_buttons"
+        android:text="Activate"
         android:textColor="@color/White"
         android:textSize="30sp" />
 
