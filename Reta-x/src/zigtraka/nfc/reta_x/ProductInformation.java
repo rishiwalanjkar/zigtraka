@@ -4,8 +4,11 @@ import java.util.Locale;
 
 import db.Access.DbForProductInformationActivity;
 
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
@@ -14,9 +17,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class ProductInformation extends BaseActivity implements TextToSpeech.OnInitListener
-{
-		String TagID, TagContents;
+public class ProductInformation extends BaseActivity implements
+		TextToSpeech.OnInitListener {
+	String TagID, TagContents;
 	String[] TagDetails;
 	Bundle bundle;
 	TextView ProductCode, ProductModel, Gemstone, Price, Carat, Cut, Type,
@@ -25,18 +28,21 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 	Button back;
 	ImageButton voice;
 	TextToSpeech textToSpeech_Obj;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 
-	    textToSpeech_Obj=new TextToSpeech(getApplicationContext(), this);
+		textToSpeech_Obj = new TextToSpeech(getApplicationContext(), this);
 		bundle = getIntent().getExtras();
 		if (bundle != null) {
 			TagID = bundle.getString("TagID");
 			TagContents = bundle.getString("TagContents");
 		}
+		if (NfcAdapter.ACTION_TECH_DISCOVERED.equals(getIntent().getAction()))
+			ScanTag(getIntent());
+
+		
 		// Welcome note.......
 		Welcome = (TextView) findViewById(R.id.product_information_welcome);
 		if (TagContents != null)
@@ -72,9 +78,9 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method 
-		     textToSpeech_Obj.stop();
-		     textToSpeech_Obj.shutdown();
+				// TODO Auto-generated method
+				textToSpeech_Obj.stop();
+				textToSpeech_Obj.shutdown();
 				finish();
 			}
 		});
@@ -85,7 +91,8 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				textToSpeech_Obj.speak(Description.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+				textToSpeech_Obj.speak(Description.getText().toString(),
+						TextToSpeech.QUEUE_FLUSH, null);
 			}
 		});
 	}
@@ -112,16 +119,17 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 	public void onInit(int status) {
 		// TODO Auto-generated method stub
 		if (status == TextToSpeech.SUCCESS) {
-			textToSpeech_Obj.setSpeechRate((float) 0.9);
+			textToSpeech_Obj.setSpeechRate((float) 0.6);
 			int result = textToSpeech_Obj.setLanguage(Locale.UK);
+			textToSpeech_Obj.speak("Welcome To " + TagContents + " Store",
+					TextToSpeech.QUEUE_FLUSH, null);
 			if (result == TextToSpeech.LANG_MISSING_DATA
 					|| result == TextToSpeech.LANG_NOT_SUPPORTED) {
 				Log.e("error", "Language is not supported");
-			} 
+			}
 		} else {
 			Log.e("error", "Failed  to Initilize!");
 		}
-		textToSpeech_Obj.speak("Welcome To " + TagContents + " Store", TextToSpeech.QUEUE_FLUSH, null);
 	}
 
 	@Override
@@ -133,11 +141,20 @@ public class ProductInformation extends BaseActivity implements TextToSpeech.OnI
 		finish();
 	}
 
+	public void ScanTag(Intent intent) {
+		Tag detectedTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+		TagID = ProductInformation.bin2hex(detectedTag.getId()).toString()
+				.toLowerCase();
+
+		TagContents = GetProductInfo.readdata(
+				GetProductInfo.getNdefMessages(intent)).toString();
+
+	}
+
 	@Override
 	protected int getResourceLayoutId() {
 		// TODO Auto-generated method stub
 		return R.layout.product_information;
 	}
-	
-	
+
 }

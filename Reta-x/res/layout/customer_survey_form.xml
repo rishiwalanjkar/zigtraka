@@ -21,17 +21,6 @@
         android:textSize="23sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/welcomeusertextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Welcome user Zigtraka"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="30sp" />
-
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
@@ -56,7 +45,6 @@
         android:id="@+id/search_product_gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="350dp"
-        android:layout_alignRight="@+id/welcomeusertextView2"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp"

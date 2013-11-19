@@ -41,5 +41,17 @@
         <item>Single Tap Single Read</item>
         <item>Single Tap Single Read</item>
     </string-array>
+    <string-array name="subscriptionoption">
+        <item >3 days</item>
+        <item >10 days</item>
+        <item >15 days</item>
+        <item >30 days</item>
+        <item >90 days</item>
+    </string-array>
+    <string-array name="dashboardforpast">
+        <item >day</item>
+        <item >week</item>
+        <item >month</item>
+    </string-array>
 
 </resources>

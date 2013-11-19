@@ -10,12 +10,109 @@
     tools:context=".SubscriptionChecker" >
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" >
+
+        <Spinner
+            android:id="@+id/Subscription_spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/Subscription_enterkeyedit"
+            android:layout_marginBottom="33dp"
+            android:layout_toRightOf="@+id/licensekeytextView"
+            android:entries="@array/subscriptionoption" />
+
+        <TextView
+            android:id="@+id/Emailtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/Nametext"
+            android:layout_below="@+id/Subscription_nameedit"
+            android:layout_marginTop="23dp"
+            android:text="Email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Subscription_emailedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Subscription_nameedit"
+            android:layout_alignTop="@+id/Emailtext"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/Subscription_enterkeyedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Subscription_spinner1"
+            android:layout_alignLeft="@+id/Emailtext"
+            android:layout_alignRight="@+id/Subscription_emailedit"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="18dp"
+            android:ems="10"
+            android:hint="Enter key" />
+
+        <TextView
+            android:id="@+id/licensekeytextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Nametext"
+            android:layout_centerVertical="true"
+            android:text="Enter License key"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/Nametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Subscription_nameedit"
+            android:layout_alignBottom="@+id/Subscription_nameedit"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="64dp"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Subscriptiontext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Subscription_spinner1"
+            android:layout_alignLeft="@+id/Emailtext"
+            android:layout_marginBottom="24dp"
+            android:text="Subscription Period"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/Subscription_nameedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="500dp"
         android:layout_height="150dp"
         android:layout_alignLeft="@+id/relativeLayout2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="96dp" >
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginTop="31dp" >
 
         <TextView
             android:id="@+id/Subscription_remaintextView"
@@ -34,7 +131,7 @@
             android:layout_alignBottom="@+id/textView1"
             android:layout_marginLeft="54dp"
             android:layout_toRightOf="@+id/textView1"
-            android:text="Large Text"
+            android:text="Active"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -56,114 +153,19 @@
             android:layout_above="@+id/Subscription_remaintextView"
             android:layout_marginLeft="33dp"
             android:layout_toRightOf="@+id/Subscription_ActivetextView"
-            android:background="@color/Green"
-            android:text="green"
+            android:background="#27AE60"
+            android:text="       "
             android:textAppearance="?android:attr/textAppearanceMedium" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="500dp"
-        android:layout_height="400dp"
-        android:layout_below="@+id/relativeLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" >
-
-        <Spinner
-            android:id="@+id/Subscription_spinner1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/Subscriptiontext"
-            android:layout_toRightOf="@+id/Subscription_enterkeyedit" />
-
-        <EditText
-            android:id="@+id/Subscription_nameedit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/Nametext"
-            android:layout_alignBottom="@+id/Nametext"
-            android:layout_toRightOf="@+id/Subscriptiontext"
-            android:ems="10"
-            android:inputType="textPersonName" >
-
-            <requestFocus />
-        </EditText>
-
-        <EditText
-            android:id="@+id/Subscription_emailedit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Subscription_nameedit"
-            android:layout_alignTop="@+id/Emailtext"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/Subscription_enterkeyedit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/licensekeytextView"
-            android:layout_below="@+id/licensekeytextView"
-            android:layout_marginTop="18dp"
-            android:ems="10"
-            android:hint="Enter key" />
-
-        <TextView
-            android:id="@+id/licensekeytextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Subscriptiontext"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="17dp"
-            android:layout_marginTop="21dp"
-            android:text="Enter License key"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="25sp"
-            android:typeface="monospace" />
-
-        <TextView
-            android:id="@+id/Subscriptiontext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/Subscription_enterkeyedit"
-            android:layout_marginLeft="21dp"
-            android:layout_marginTop="33dp"
-            android:text="Subscription Period"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/Emailtext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Subscription_enterkeyedit"
-            android:layout_below="@+id/Subscription_nameedit"
-            android:layout_marginTop="33dp"
-            android:text="Email"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/Nametext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Emailtext"
-            android:layout_below="@+id/Subscription_spinner1"
-            android:layout_marginTop="52dp"
-            android:text="Name"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="25sp" />
     </RelativeLayout>
 
     <Button
         android:id="@+id/Subscription_button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/relativeLayout2"
-        android:layout_below="@+id/relativeLayout2"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="57dp"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="94dp"
+        android:layout_marginLeft="62dp"
         android:background="@drawable/positive_buttons"
         android:text="Register"
         android:textColor="@color/White"
@@ -175,7 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/Subscription_button_register"
         android:layout_alignBottom="@+id/Subscription_button_register"
-        android:layout_marginLeft="75dp"
+        android:layout_marginLeft="61dp"
         android:layout_toRightOf="@+id/Subscription_button_register"
         android:background="@drawable/positive_buttons"
         android:text="Activate"

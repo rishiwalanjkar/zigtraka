@@ -160,7 +160,7 @@ public class GetProductInfo extends BaseActivity{
 		return false;
 	}
 
-	public NdefMessage[] getNdefMessages(Intent intent) {
+	public static NdefMessage[] getNdefMessages(Intent intent) {
 		NdefMessage[] message = null;
 		Parcelable[] rawMessages = intent
 				.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
@@ -179,7 +179,7 @@ public class GetProductInfo extends BaseActivity{
 		return message;
 	}
 
-	public StringBuilder readdata(NdefMessage[] messages) {
+	public static StringBuilder readdata(NdefMessage[] messages) {
 		String payload = new String();
 		StringBuilder myText = new StringBuilder();
 		if (messages != null)

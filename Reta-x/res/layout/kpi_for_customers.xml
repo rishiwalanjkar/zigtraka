@@ -10,12 +10,13 @@
 
     <Spinner
         android:id="@+id/charts_and_graph_spinner"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="23dp"
-        android:layout_marginTop="35dp" />
+        android:layout_marginTop="35dp"
+        android:entries="@array/dashboardforpast" />
 
     <TextView
         android:id="@+id/message"

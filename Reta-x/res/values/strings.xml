@@ -25,8 +25,8 @@
     <string name="total_taps_in_this_period_tot">tot</string>
     <string name="increase_in_taps">tot</string>
     <string name="increase_in_taps_over_previous">% increase in taps over previous period</string>
-    <string name="Top_3_least_tapped_items">Top 3 least tapped items:</string>
-    <string name="Top_3_most_frequently_tapped_items">Top 3 most frequently tapped items:</string>
+    <string name="Top_3_least_tapped_items">Top 3 least tapped \n\titems:</string>
+    <string name="Top_3_most_frequently_tapped_items">Top 3 most frequently \n\ttapped items:</string>
     <string name="Average_time_spent_by_a_customer">Average time spent by a customer</string>
     <string name="Average_time_spent_by_a_customer_tot">tot</string>
     <string name="increase_in_new_customers_over_period">% increase in new customers over period</string>

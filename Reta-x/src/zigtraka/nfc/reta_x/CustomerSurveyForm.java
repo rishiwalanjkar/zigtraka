@@ -22,11 +22,6 @@ public class CustomerSurveyForm extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		Welcome = (TextView) findViewById(R.id.welcomeusertextView2);
-		String fontpath = "fonts/Roboto-Bold.ttf";
-		Typeface tf = Typeface.createFromAsset(getAssets(),fontpath);
-		Welcome.setTypeface(tf);
-		
 		NameEdit = (EditText) findViewById(R.id.customer_survey_form_customer_nameedit);
 		AreaEdit = (EditText) findViewById(R.id.customer_survey_form_customer_areaedit);
 		AddressEdit = (EditText) findViewById(R.id.customer_survey_form_customer_addressedit);

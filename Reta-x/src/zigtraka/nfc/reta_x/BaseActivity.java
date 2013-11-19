@@ -84,7 +84,7 @@ public abstract class BaseActivity extends Activity {
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
 					startActivity(new Intent(getApplicationContext(),
-							Admin.class));
+							Admin.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 				}
 			});
 
@@ -94,7 +94,10 @@ public abstract class BaseActivity extends Activity {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					System.exit(0);
+					 Intent intent = new Intent(Intent.ACTION_MAIN);
+					    intent.addCategory(Intent.CATEGORY_HOME);
+					    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					    startActivity(intent);
 				}
 			});
 			

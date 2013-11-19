@@ -9,12 +9,13 @@
 
     <Spinner
         android:id="@+id/ForPastspinner"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:entries="@array/dashboardforpast" />
 
     <TextView
         android:id="@+id/message"
@@ -66,9 +67,10 @@
         android:layout_alignBaseline="@+id/increaseinapstextView"
         android:layout_alignBottom="@+id/increaseinapstextView"
         android:layout_alignLeft="@+id/kpi_for_assets_totaltapstextView"
+        android:gravity="right"
         android:paddingLeft="30dp"
         android:text="@string/increase_in_taps"
-        android:textSize="23sp" android:gravity="right" />
+        android:textSize="23sp" />
 
     <TextView
         android:id="@+id/kpi_for_assets_totaltapstextView"
@@ -77,29 +79,18 @@
         android:layout_alignBaseline="@+id/textView4"
         android:layout_alignBottom="@+id/textView4"
         android:layout_alignLeft="@+id/kpi_for_assets_AssetsnotscannedtextView"
+        android:gravity="right"
         android:paddingLeft="30dp"
         android:text="@string/total_taps_in_this_period_tot"
-        android:textSize="23sp" android:gravity="right" />
-
-    <ListView
-        android:id="@+id/kpi_for_assets_top_least_tappedlistView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignRight="@+id/textView6"
-        android:layout_below="@+id/textView6"
-        android:layout_marginTop="67dp"
-         android:textSize="20sp">
-
-    </ListView>
+        android:textSize="23sp" />
 
     <ListView
         android:id="@+id/kpi_for_assets_top_most_tappedlistView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView7"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
         android:layout_alignRight="@+id/textView7"
-        android:layout_alignTop="@+id/kpi_for_assets_top_least_tappedlistView" android:textSize="20sp">
+        android:layout_alignTop="@+id/kpi_for_assets_top_least_tappedlistView"
+        android:fadeScrollbars="false" >
     </ListView>
 
     <TextView
@@ -128,9 +119,19 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView4"
         android:layout_alignRight="@+id/textView7"
+        android:gravity="right"
         android:paddingLeft="30dp"
         android:text="@string/na"
-        android:textSize="23sp"
-        android:gravity="right" />
+        android:textSize="23sp" />
+
+    <ListView
+        android:id="@+id/kpi_for_assets_top_least_tappedlistView"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="23dp"
+        android:fadeScrollbars="false" >
+    </ListView>
 
 </RelativeLayout>
